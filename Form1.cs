@@ -26,6 +26,10 @@ public partial class Form1 : Form
         if (File.Exists("steamwebapi.key"))
             apiKey = File.ReadAllText("steamwebapi.key");
 
+        // Load Steam ID from file if it exists
+        if (File.Exists("steamid.txt"))
+            textBox1.Text = File.ReadAllText("steamid.txt");
+
         // Load global data from json files
         GlobalData.SaveData = JsonConvert.DeserializeObject<UserSaveData>(File.ReadAllText("savedata.json"));
         GlobalData.Inventory = JsonConvert.DeserializeObject<UserInventoryData>(File.ReadAllText("inventory.json"));
@@ -114,7 +118,7 @@ public partial class Form1 : Form
     {
         ProcessStartInfo psi = new ProcessStartInfo
         {
-            FileName = "https://steamid.xyz/",
+            FileName = "https://www.steamidfinder.com/",
             UseShellExecute = true
         };
         Process.Start(psi);
@@ -122,10 +126,13 @@ public partial class Form1 : Form
 
     private void button6_Click(object sender, EventArgs e)
     {
+        // Save SteamID to file
+        File.WriteAllText("steamid.txt", textBox1.Text);
         // Prompt user with text box to set Steam Web API Key
         apiKey = Interaction.InputBox("Enter Steam Web API Key", "Steam Web API Key");
         // Save API key to file
-        File.WriteAllText("steamwebapi.key", apiKey);
+        if (apiKey != "")
+            File.WriteAllText("steamwebapi.key", apiKey);
     }
 
     private void button3_Click(object sender, EventArgs e)
@@ -170,6 +177,9 @@ public partial class Form1 : Form
             button2.Text = "Start";
             Log("Stopping server...");
 
+            // Save SteamID to file
+            File.WriteAllText("steamid.txt", textBox1.Text);
+
             // Stop HTTP listener
             listener.Stop();
 
@@ -181,6 +191,9 @@ public partial class Form1 : Form
             // Start server
             button2.Text = "Stop";
             Log("Starting server...");
+
+            // Save SteamID to file
+            File.WriteAllText("steamid.txt", textBox1.Text);
 
             // Start HTTP listener
             listener = new HttpListener();

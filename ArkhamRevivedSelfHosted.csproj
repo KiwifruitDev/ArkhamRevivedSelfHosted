@@ -7,6 +7,11 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>icon.ico</ApplicationIcon>
+    <!-- ProductVersion -->
+    <Version>1.0.1</Version>
+    <Authors>KiwifruitDev</Authors>
+    <Company>KiwifruitDev</Company>
+    <Copyright>Copyright (c) 2023 KiwifruitDev; Licensed under the MIT License; Newtonsoft.Json is licensed under the MIT License</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

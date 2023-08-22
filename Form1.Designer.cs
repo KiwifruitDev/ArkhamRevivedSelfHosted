@@ -29,19 +29,19 @@ partial class Form1
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-        TreeNode treeNode1 = new TreeNode("Customization Profile Data");
-        TreeNode treeNode2 = new TreeNode("Loadout Data");
-        TreeNode treeNode3 = new TreeNode("Bane Team Recent Unlocks");
-        TreeNode treeNode4 = new TreeNode("Joker Team Recent Unlocks");
-        TreeNode treeNode5 = new TreeNode("Recent Unlocks", new TreeNode[] { treeNode3, treeNode4 });
-        TreeNode treeNode6 = new TreeNode("Matchmaking Data");
-        TreeNode treeNode7 = new TreeNode("Weapon Scores");
-        TreeNode treeNode8 = new TreeNode("Save Data", new TreeNode[] { treeNode1, treeNode2, treeNode5, treeNode6, treeNode7 });
-        TreeNode treeNode9 = new TreeNode("Message of the Day");
-        TreeNode treeNode10 = new TreeNode("Inventory");
-        TreeNode treeNode11 = new TreeNode("Catalog");
-        TreeNode treeNode12 = new TreeNode("Item Store");
-        TreeNode treeNode13 = new TreeNode("Credits Store");
+        TreeNode treeNode14 = new TreeNode("Customization Profile Data");
+        TreeNode treeNode15 = new TreeNode("Loadout Data");
+        TreeNode treeNode16 = new TreeNode("Bane Team Recent Unlocks");
+        TreeNode treeNode17 = new TreeNode("Joker Team Recent Unlocks");
+        TreeNode treeNode18 = new TreeNode("Recent Unlocks", new TreeNode[] { treeNode16, treeNode17 });
+        TreeNode treeNode19 = new TreeNode("Matchmaking Data");
+        TreeNode treeNode20 = new TreeNode("Weapon Scores");
+        TreeNode treeNode21 = new TreeNode("Save Data", new TreeNode[] { treeNode14, treeNode15, treeNode18, treeNode19, treeNode20 });
+        TreeNode treeNode22 = new TreeNode("Message of the Day");
+        TreeNode treeNode23 = new TreeNode("Inventory");
+        TreeNode treeNode24 = new TreeNode("Catalog");
+        TreeNode treeNode25 = new TreeNode("Item Store");
+        TreeNode treeNode26 = new TreeNode("Credits Store");
         propertyGrid1 = new PropertyGrid();
         tabControl1 = new TabControl();
         tabPage1 = new TabPage();
@@ -160,11 +160,11 @@ partial class Form1
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(58, 32);
+        label2.Location = new Point(18, 32);
         label2.Name = "label2";
-        label2.Size = new Size(54, 15);
+        label2.Size = new Size(94, 15);
         label2.TabIndex = 4;
-        label2.Text = "Steam ID";
+        label2.Text = "SteamID64 (Dec)";
         // 
         // label4
         // 
@@ -181,7 +181,7 @@ partial class Form1
         button4.Name = "button4";
         button4.Size = new Size(217, 23);
         button4.TabIndex = 5;
-        button4.Text = "Find at steamid.xyz";
+        button4.Text = "Find at steamidfinder.com";
         button4.UseVisualStyleBackColor = true;
         button4.Click += button4_Click;
         // 
@@ -286,33 +286,33 @@ partial class Form1
         treeView1.Dock = DockStyle.Top;
         treeView1.Location = new Point(0, 0);
         treeView1.Name = "treeView1";
-        treeNode1.Name = "CustomizationProfileData";
-        treeNode1.Text = "Customization Profile Data";
-        treeNode2.Name = "LoadoutData";
-        treeNode2.Text = "Loadout Data";
-        treeNode3.Name = "BaneTeamRecentUnlocks";
-        treeNode3.Text = "Bane Team Recent Unlocks";
-        treeNode4.Name = "BaneTeamRecentUnlocks";
-        treeNode4.Text = "Joker Team Recent Unlocks";
-        treeNode5.Name = "RecentUnlocks";
-        treeNode5.Text = "Recent Unlocks";
-        treeNode6.Name = "MatchmakingData";
-        treeNode6.Text = "Matchmaking Data";
-        treeNode7.Name = "WeaponScores";
-        treeNode7.Text = "Weapon Scores";
-        treeNode8.Name = "SaveData";
-        treeNode8.Text = "Save Data";
-        treeNode9.Name = "MessageOfTheDay";
-        treeNode9.Text = "Message of the Day";
-        treeNode10.Name = "Inventory";
-        treeNode10.Text = "Inventory";
-        treeNode11.Name = "Catalog";
-        treeNode11.Text = "Catalog";
-        treeNode12.Name = "ItemStore";
-        treeNode12.Text = "Item Store";
-        treeNode13.Name = "CreditsStore";
-        treeNode13.Text = "Credits Store";
-        treeView1.Nodes.AddRange(new TreeNode[] { treeNode8, treeNode9, treeNode10, treeNode11, treeNode12, treeNode13 });
+        treeNode14.Name = "CustomizationProfileData";
+        treeNode14.Text = "Customization Profile Data";
+        treeNode15.Name = "LoadoutData";
+        treeNode15.Text = "Loadout Data";
+        treeNode16.Name = "BaneTeamRecentUnlocks";
+        treeNode16.Text = "Bane Team Recent Unlocks";
+        treeNode17.Name = "BaneTeamRecentUnlocks";
+        treeNode17.Text = "Joker Team Recent Unlocks";
+        treeNode18.Name = "RecentUnlocks";
+        treeNode18.Text = "Recent Unlocks";
+        treeNode19.Name = "MatchmakingData";
+        treeNode19.Text = "Matchmaking Data";
+        treeNode20.Name = "WeaponScores";
+        treeNode20.Text = "Weapon Scores";
+        treeNode21.Name = "SaveData";
+        treeNode21.Text = "Save Data";
+        treeNode22.Name = "MessageOfTheDay";
+        treeNode22.Text = "Message of the Day";
+        treeNode23.Name = "Inventory";
+        treeNode23.Text = "Inventory";
+        treeNode24.Name = "Catalog";
+        treeNode24.Text = "Catalog";
+        treeNode25.Name = "ItemStore";
+        treeNode25.Text = "Item Store";
+        treeNode26.Name = "CreditsStore";
+        treeNode26.Text = "Credits Store";
+        treeView1.Nodes.AddRange(new TreeNode[] { treeNode21, treeNode22, treeNode23, treeNode24, treeNode25, treeNode26 });
         treeView1.Size = new Size(238, 112);
         treeView1.TabIndex = 2;
         treeView1.AfterSelect += treeView1_AfterSelect;
